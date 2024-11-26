@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Management System</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <header>
+      <div class="header-left">
+        <div class="logo">HOSPITAL LOGO</div>
+        <div class="search-bar">
+          <input type="text" id="search-patients" placeholder="Search bar to find patients quickly">
+        </div>
+      </div>
+      <div class="header-right">
+        <nav>
+          <button class="nav-btn" data-page="dashboard">Dashboard</button>
+          <button class="nav-btn" data-page="appointments">Appointments</button>
+          <button class="nav-btn" data-page="billing">Billing</button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <aside>
+        <div>
+          <ul>
+            <li><button class="side-btn" data-page="add-patient">Add New Patient</button></li>
+            <li><button class="side-btn" data-page="view-patients">View All Patients</button></li>
+            <li><button class="side-btn" data-page="reports">Reports</button></li>
+          </ul>
+        </div>
+        <div class="bottom-links">
+          <ul>
+            <li><button class="side-btn" data-page="patients-dashboard">Patient's Dashboard</button></li>
+            <li><button class="side-btn" data-page="doctors-dashboard">Doctor's Dashboard</button></li>
+            <li><button class="side-btn" data-page="admin-panel">Admin's Panel</button></li>
+          </ul>
+        </div>
+      </aside>
+
+      <section id="content">
+        <p>Welcome to the Hospital Management System!</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/scripts.js" type="module"></script>
+</body>
+</html>

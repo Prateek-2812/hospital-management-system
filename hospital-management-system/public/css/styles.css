@@ -1,0 +1,182 @@
+:root {
+    --primary-color: #155724; /* Dark green for header and sidebar */
+    --secondary-color: #e9f5ee; /* Light green for page background */
+    --content-bg-color: #dff8e4; /* Lighter green for main content area */
+    --text-color: #ffffff; /* White text */
+    --content-text-color: #000000; /* Black text for main content */
+    --border-color: #0b3621; /* Dark border */
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--secondary-color); /* Full-page light background */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Header Styling */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 2px solid var(--border-color); /* Border around the header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fixed header */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures header stays above other elements */
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--text-color); /* White background for logo */
+    color: var(--primary-color); /* Green text for logo */
+    padding: 5px 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+  }
+  
+  .search-bar input {
+    width: 300px;
+    padding: 8px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background-color: #ffffff; /* White background for input */
+    color: var(--primary-color); /* Dark green text */
+  }
+  
+  .header-right nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-btn {
+    background-color: var(--text-color); /* White background */
+    color: var(--primary-color); /* Dark green text */
+    border: 2px solid var(--border-color);
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .nav-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  /* Main Section and Sidebar */
+  main {
+    display: flex;
+    background-color: var(--secondary-color); /* Light green background */
+    margin-top: 80px; /* Prevent content from overlapping fixed header */
+    height: calc(100vh - 80px); /* Adjust height to accommodate header */
+  }
+  
+  aside {
+    width: 250px;
+    background-color: var(--primary-color); /* Darker sidebar */
+    color: var(--text-color);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 2px solid var(--border-color);
+  }
+  
+  aside ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  aside .side-btn {
+    display: block;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .bottom-links {
+    margin-top: auto; /* Push bottom links to the bottom */
+  }
+  
+  .bottom-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  
+  .bottom-links .side-btn {
+    background-color: var(--text-color); /* White background */
+    color: var(--primary-color); /* Dark green text */
+    margin-top: 10px;
+    border: 1px solid var(--border-color);
+  }
+  
+  /* Content Section */
+  #content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: var(--content-bg-color); /* Lighter green for main content */
+    color: var(--content-text-color); /* Black text for content */
+    border-left: 2px solid var(--border-color);
+    overflow-y: auto; /* Scrollable content */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .header-left {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .header-right nav {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .search-bar input {
+      width: 100%;
+    }
+  
+    aside {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      border-right: none;
+      border-bottom: 2px solid var(--border-color);
+    }
+  
+    #content {
+      padding: 10px;
+    }
+  }
+  
